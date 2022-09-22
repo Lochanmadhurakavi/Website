@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h1>Login</h1>
+    
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3 mt-5">
+            <label for="" class="form-label">Username</label>
+            <input type="email" class="form-control" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <input type="submit" class="btn btn-secondary" value="Submit">
+    </form>
+
+</div>
+
+
+{% endblock content %}

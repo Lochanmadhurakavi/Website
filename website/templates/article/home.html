@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+<div class="container" style="width: 600px;">
+    <table class="table table-bordered table-primary mt-5 rounded-pill">
+        <tr>
+            <td>{{ data.A }}</td>
+            <td>{{ data.B }}</td>
+            <td>{{ data.C }}{{ data.D }}{{ data.E }}{{ data.F }}{{ data.G }}{{ data.H }}</td>
+            <td>{{ data.I }}{{ data.J }}{{ data.K }}{{ data.L }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container mt-5" style="width: 700px;">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table id="tabl" class="table table-borderless">
+            <thead>
+                <tr>
+                    <th style="color: #4E9F3D;">Type</th>
+                    <th style="color: #4E9F3D;">Specification</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr id="ty">
+                    <td>A1</td>
+                    <td>{{ form1.A }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">100</td>
+                    <td>{{ form1.B }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">1st Digit</td>
+                    <td>{{ form1.C }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">2nd & 3rd Digit</td>
+                    <td>{{ form1.D }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">4th & 5th Digit</td>
+                    <td>{{ form1.E }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">6th Digit</td>
+                    <td>{{ form1.F }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">7th Digit</td>
+                    <td>{{ form1.G }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">8th Digit</td>
+                    <td>{{ form1.H }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">9th Digit</td>
+                    <td>{{ form1.I }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">10th & 11th Digit</td>
+                    <td>{{ form1.J }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">12th Digit</td>
+                    <td>{{ form1.K }}</td>
+                </tr>
+                <tr>
+                    <td id="ty">13th & 14th Digit</td>
+                    <td>{{ form1.L }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+            <!-- {{ form1.as_p }} -->
+            <input class="btn btn-primary" type="submit" value="submit">
+            
+    </form>
+    
+ 
+</div>
+{% endblock content %}
